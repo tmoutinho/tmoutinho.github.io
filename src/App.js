@@ -27,20 +27,26 @@ import React from "react";
 
 function App() {
   React.useEffect(() => {
-    frame.init("cRQNm5CMnd5HZzKJcJdbo6G7A4SfsWb7Iync5c63RGY", {
+    frame.init("pIoFHWz77KQIMIAPt7lTyMc_cSrcB2MmwDsaQTTaEn4", {
       api_host: "https://analytics.dev-conductive.ai",
       debug: true,
     });
 
-    if (window.frameUtils.frame_id) {
-      document.getElementById("fingerprintId").innerHTML =
-        window.frameUtils.frame_id;
-    }
+    setTimeout(() => {
+      if (window.frameUtils.frame_id) {
+        document.getElementById("fingerprintId").innerHTML =
+          window.frameUtils.frame_id;
+      }
 
-    if (window.frameUtils.distinct_id) {
-      document.getElementById("distinctId").innerHTML =
-        window.frameUtils.distinct_id;
-    }
+      if (window.frameUtils.distinct_id) {
+        document.getElementById("distinctId").innerHTML =
+          window.frameUtils.distinct_id;
+      }
+    }, 2000);
+
+    // return () => {
+    //   timeout.clearTimeout();
+    // };
   }, []);
 
   return (

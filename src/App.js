@@ -29,8 +29,17 @@ function App() {
   React.useEffect(
     () =>
       frame.init("cRQNm5CMnd5HZzKJcJdbo6G7A4SfsWb7Iync5c63RGY", {
-        api_host: "https://analytics.qa-conductive.ai",
+        api_host: "https://analytics.dev-conductive.ai",
         debug: true,
+        loaded: (frame) => {
+          console.log("frame_id", frame.get_frame_id());
+          console.log("distinct_id", frame.get_distinct_id());
+
+          document.getElementById("fingerprintId").innerHTML =
+            frame.get_frame_id();
+          document.getElementById("distinctId").innerHTML =
+            frame.get_distinct_id();
+        },
       }),
     []
   );
@@ -58,8 +67,12 @@ function App() {
           </li>
         </ul>
 
-        <div id="dictinctId">Computing...</div>
-        <div id="speedId">Computing speed...</div>
+        <div>
+          Fingerprint ID: <span id="fingerprintId">Loading...</span>
+        </div>
+        <div>
+          Distinct ID: <span id="distinctId">Loading...</span>
+        </div>
 
         {/* <input className="wconnect" type="button" value="Connect Wallet" onClick={connect}/> */}
 

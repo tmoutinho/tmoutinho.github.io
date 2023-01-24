@@ -33,14 +33,14 @@ function App() {
     });
 
     setTimeout(() => {
-      if (window.frameUtils.frame_id) {
+      if (window.frameUtils.distinct_id) {
         document.getElementById("fingerprintId").innerHTML =
-          window.frameUtils.frame_id;
+          window.frameUtils.distinct_id;
       }
 
-      if (window.frameUtils.distinct_id) {
-        document.getElementById("distinctId").innerHTML =
-          window.frameUtils.distinct_id;
+      if (window.frameUtils.old_distinct_id) {
+        document.getElementById("oldDistinctId").innerHTML =
+          window.frameUtils.old_distinct_id;
       }
     }, 2000);
 
@@ -76,7 +76,7 @@ function App() {
           Fingerprint ID: <span id="fingerprintId">Loading...</span>
         </div>
         <div>
-          Distinct ID: <span id="distinctId">Loading...</span>
+          Distinct ID: <span id="oldDistinctId">Loading...</span>
         </div>
 
         {/* <input className="wconnect" type="button" value="Connect Wallet" onClick={connect}/> */}

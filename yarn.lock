@@ -1082,10 +1082,10 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@conductiveai/conductive-sdk@^1.1.11":
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/@conductiveai/conductive-sdk/-/conductive-sdk-1.1.11.tgz#30366f60c2428974675c7948b241fcca17a1773e"
-  integrity sha512-9JX9jMkrbZ69kUDG2HHlDl1aFUDUqJcdMN/qbdG+8fgr12BYUo0r+xyLyNk3YVD+XIFoRpehfleu8CjH5PWl4g==
+"@conductiveai/conductive-sdk@^1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@conductiveai/conductive-sdk/-/conductive-sdk-1.1.12.tgz#1bcfd02059e46163ec7f6ea32481f91ba1d45985"
+  integrity sha512-5v/0bzXCPUHeJbZGLomVAeII8xoHgnAbcm0LF6Hvo63oURFIlEdm71TXc9Bao9e7/rXBy5HD0p44uqCc9esSFA==
   dependencies:
     ethers "^5.5.1"
     fflate "^0.4.1"

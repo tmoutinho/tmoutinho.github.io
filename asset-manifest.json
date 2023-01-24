@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.42b2e475.css",
-    "main.js": "/static/js/main.cf1d0a70.js",
+    "main.js": "/static/js/main.f89a7247.js",
     "static/media/apelaser.png": "/static/media/apelaser.099b4a1b46854a4df81b.png",
     "index.html": "/index.html",
     "main.42b2e475.css.map": "/static/css/main.42b2e475.css.map",
-    "main.cf1d0a70.js.map": "/static/js/main.cf1d0a70.js.map"
+    "main.f89a7247.js.map": "/static/js/main.f89a7247.js.map"
   },
   "entrypoints": [
     "static/css/main.42b2e475.css",
-    "static/js/main.cf1d0a70.js"
+    "static/js/main.f89a7247.js"
   ]
 }

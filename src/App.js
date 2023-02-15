@@ -15,8 +15,12 @@ function App() {
   }, []);
 
   return (
-    <div className="container my-4 mx-auto space-y-4">
-      <h1 className="text-3xl font-bold">SDK testing env</h1>
+    <div className="container max-w-xl my-4 mx-auto space-y-4">
+      <header>
+        <div className="flex justify-between">
+          <h1 className="text-3xl font-bold">SDK testing env</h1>
+        </div>
+      </header>
 
       <img
         id="NFT"
@@ -29,7 +33,7 @@ function App() {
         <WalletConnect />
       </div>
 
-      <div className="">
+      <div className="flex gap-2">
         <div className="flex mb-4">
           <a
             href="https://ape.to/zwcjk"

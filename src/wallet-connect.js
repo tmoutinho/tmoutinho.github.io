@@ -66,9 +66,11 @@ export function WalletConnect() {
         </button>
       )}
       {userAccount.Account !== "" && (
-        <div className="p-2 border border-green-500">
-          <p className="text-xs">Wallet address</p>
-          <p className="text-base font-semibold">{userAccount.Account}</p>
+        <div>
+          <p className="text-xs">CONNECTED</p>
+          <p className="text-base font-semibold">
+            {userAccount.Account.slice(0, 6)}...{userAccount.Account.slice(-4)}
+          </p>
         </div>
       )}
     </>

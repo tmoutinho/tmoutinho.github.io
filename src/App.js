@@ -5,12 +5,8 @@ import { WalletConnect } from "./wallet-connect";
 
 function App() {
   useEffect(() => {
-    frame.init("16OG2oVu4GYg8CjfOQKHl_O7htLut7avxzjNbfLWyuc", {
-      api_host: "https://analytics.dev-conductive.ai",
-      debug: true,
-      loaded: (frame) => {
-        window.frame = frame;
-      },
+    frame.init("GRjwwfu4barXrnqnWJ2BknMOlbi2w32ruCZFiUHWQPk", {
+      api_host: "https://frame.conductive.ai",
     });
   }, []);
 

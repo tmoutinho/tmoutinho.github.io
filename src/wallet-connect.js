@@ -8,6 +8,13 @@ export function WalletConnect() {
   });
 
   let isItConnect = async () => {
+    if (window.ethereum === undefined) {
+      return {
+        status: false,
+        userAddress: "",
+      };
+    }
+    
     let provider = new ethers.providers.Web3Provider(window.ethereum);
     let accounts = await provider.send("eth_requestAccounts", []);
 
@@ -32,13 +39,16 @@ export function WalletConnect() {
     });
   };
 
-  window.ethereum.on("accountsChanged", async () => {
-    localStorage.removeItem("isConnected");
-    setUserAccount((prev) => {
-      return { ...prev, Account: "" };
+  if (window.ethereum !== undefined) {
+    window.ethereum.on("accountsChanged", async () => {
+      localStorage.removeItem("isConnected");
+      setUserAccount((prev) => {
+        return { ...prev, Account: "" };
+      });
+      // connect();
     });
-    // connect();
-  });
+  }
+ 
 
   // useEffect(() => {
   //   let status = localStorage.getItem("isConnected");

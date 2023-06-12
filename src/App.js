@@ -7,6 +7,10 @@ function App() {
   useEffect(() => {
     frame.init("GRjwwfu4barXrnqnWJ2BknMOlbi2w32ruCZFiUHWQPk", {
       api_host: "https://frame.conductive.ai",
+      debug: true,
+      loaded: (frame) => {
+        frame.reset()
+      },
     });
   }, []);
 
@@ -14,7 +18,7 @@ function App() {
     <div className="container max-w-xl my-4 mx-auto space-y-4">
       <header>
         <div className="flex justify-between">
-          <h1 className="text-3xl font-bold">SDK testing env</h1>
+          <h1 className="text-3xl font-bold">SDK testing env 111</h1>
         </div>
       </header>
 
